@@ -44,7 +44,7 @@ class UserOut(BaseModel):
     created_at: datetime
 
     class Config:
-        from_attributes = True
+       orm_mode = True
 
 class UserUpdate(BaseModel):
     name: Optional[str] = None
@@ -110,7 +110,7 @@ class ProductOut(BaseModel):
     distance_km: Optional[float] = None
 
     class Config:
-        from_attributes = True
+       orm_mode = True
 
 # Enquiry schemas
 class EnquiryCreate(BaseModel):
@@ -132,7 +132,7 @@ class EnquiryOut(BaseModel):
     product: Optional[dict] = None
 
     class Config:
-        from_attributes = True
+       orm_mode = True
 
 # Message schemas
 class MessageCreate(BaseModel):
@@ -150,7 +150,7 @@ class MessageOut(BaseModel):
     created_at: datetime
 
     class Config:
-        from_attributes = True
+       orm_mode = True
 
 # Review schemas
 class ReviewCreate(BaseModel):
@@ -176,4 +176,4 @@ class AlertOut(BaseModel):
     created_at: datetime
 
     class Config:
-        from_attributes = True
+       orm_mode = True
